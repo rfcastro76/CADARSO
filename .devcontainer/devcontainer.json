@@ -1,0 +1,22 @@
+{
+  "name": "CADARSO - Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker": {
+      "version": "1"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-azuretools.vscode-docker",
+        "GitHub.codespaces"
+      ]
+    }
+  },
+  "forwardPorts": [8888, 8889],
+  "postCreateCommand": "pip install --upgrade pip || true",
+  "remoteUser": "vscode"
+}
